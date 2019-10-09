@@ -20,10 +20,10 @@ class classifier():
     
     def closest(self,row):
         b_index=0
-        b_dist=euc_dist(row,self.x_train[0])
+        b_dist=self.euc_dist(row,self.x_train[0])
         
         for i in range(len(self.x_train)):
-            d=euc_dist(row,self.x_train[i])
+            d=self.euc_dist(row,self.x_train[i])
             if(d<b_dist):
                 b_dist=d
                 b_index=i
